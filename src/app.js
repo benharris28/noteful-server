@@ -5,6 +5,8 @@ const cors = require('cors')
 const helmet = require('helmet')
 const { NODE_ENV } = require('./config')
 const foldersRouter = require('./folders/folders-router')
+const notesRouter = require('./notes/notes-router')
+
 
 
 
@@ -18,7 +20,7 @@ app.use(helmet())
 
 app.use('/api/folders', foldersRouter)
 
-app.use('/api/notes', articlesRouter)
+app.use('/api/notes', notesRouter)
 
 
 
